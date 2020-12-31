@@ -16,13 +16,13 @@ def insert_board(player, position):
 
 def win_condition(player):
     if board[0] == board[1] == board[2] == player or board[3] == board[4] == board[5] == player or board[6] == board[7] == board[8] == player:
-        print(f"Player {player} wins!")
+        print(f"Player {player} wins! [Horizontal Line]")
         play_again()
     elif board[0] == board[3] == board[6] == player or board[1] == board[4] == board[7] == player or board[2] == board[5] == board[8] == player:
-        print(f"Player {player} wins!")
+        print(f"Player {player} wins! [Vertical Line]")
         play_again()
     elif board[0] == board[4] == board[8] == player or board[2] == board[4] == board[6] == player:
-        print(f"Player {player} wins!")
+        print(f"Player {player} wins! [Diagonal Line]")
         play_again()
     else:
         change_player(player)
